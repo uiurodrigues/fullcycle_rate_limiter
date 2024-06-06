@@ -31,7 +31,7 @@ func main() {
 func getDB(storageType string) ports.Repository {
 	if storageType == "redis" {
 		return database.NewRedisDB(&redis.Options{
-			Addr:     "localhost:6379",
+			Addr:     "redis:6379",
 			Password: "",
 			DB:       0,
 		})

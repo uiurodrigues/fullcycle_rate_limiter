@@ -2,6 +2,19 @@ version: '3'
 
 services:
   redis:
+    container_name: redis
     image: redis:alpine
     ports:
       - 6379:6379
+
+  rate_limiter:
+      container_name: rate_limiter
+      build:
+        context: .
+        dockerfile: ./Dockerfile
+      image: rate_limiter
+      ports:
+        - "8080:8080"
+      depends_on:
+        - redis
+  

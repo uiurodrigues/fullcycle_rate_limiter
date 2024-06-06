@@ -3,8 +3,9 @@
 
 ## Installation
 
-- Execute the command [docker-compose up -d] to ensure that the environment is working
-- Execute the command [go run cmd/main.go]
+- Execute the command [docker-compose up -d] to up all the application and environment
+- The application Will be running on [http://localhost:8080/]
+- To use the rate limit by token, just add [API_TOKEN] header on it
 
 ## Explaining the configuration
 * ENABLE_RATE_LIMIT_BY_IP
